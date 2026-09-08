@@ -1,0 +1,10 @@
+ip a                    # IP Address: Shows all network interfaces, IP addresses, and MAC addresses.
+ip route                # IP Route: Displays the system's routing table and default gateway.
+ping -c 4 8.8.8.8       # Ping: Tests connectivity to a target by sending 4 ICMP packets.
+ss -antp                # Socket Stats: Shows active TCP connections, listening ports, and the Process IDs (PIDs) associated with them.
+netstat -tulpn          # Netstat: Displays all listening ports (TCP & UDP) and running services.
+lsof -i :80             # List Open Files: Identifies which process is actively using port 80.
+nslookup target.com     # NSLookup: Queries DNS to resolve a hostname to an IP address.
+dig target.com ANY      # Dig: Extracts all available DNS records (A, TXT, MX, NS) for a domain.
+whois target.com        # Whois: Retrieves domain registration and owner information.
+arp -a                  # ARP: Shows the ARP cache, mapping IP addresses to MAC addresses on the local network.

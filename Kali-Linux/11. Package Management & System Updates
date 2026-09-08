@@ -1,0 +1,7 @@
+sudo apt update                 # Update: Fetches the latest version list of available packages from repositories.
+sudo apt upgrade -y             # Upgrade: Installs newer versions of all installed packages automatically.
+sudo apt install <package>      # Install: Installs a specific tool or package (e.g., sudo apt install nmap).
+sudo apt remove <package>       # Remove: Uninstalls a package but keeps its configuration files intact.
+sudo apt purge <package>        # Purge: Completely removes a package ALONG WITH its configuration files.
+sudo dpkg -i tool.deb           # DPKG Install: Manually installs a downloaded Debian (.deb) package file.
+sudo apt autoremove -y          # Autoremove: Removes unused dependencies and frees up disk space.

@@ -1,8 +1,0 @@
-find / -type f -name "user.txt" 2>/dev/null      # Find: Searches for "user.txt" across the entire system, hiding permission errors.
-find / -perm -4000 2>/dev/null                   # Find SUID: Looks for files with SUID bits set (Crucial for PrivEsc).
-grep -rin "password" /etc/                       # Grep: Recursively searches for the string "password" inside all files in /etc/, ignoring case, and shows line numbers.
-awk '{print $1}' access.log                      # Awk: Extracts and prints only the first column of a file (e.g., extracting IP addresses from an Apache log).
-sed -i 's/old-word/new-word/g' file.txt          # Sed: Finds and replaces a specific word globally inside a text file.
-strings compiled_binary                          # Strings: Extracts readable ASCII characters from a compiled binary or executable (Reverse Engineering basics).
-sort -u wordlist.txt                             # Sort Unique: Sorts a file alphabetically and removes any duplicate lines.
-wc -l passwords.txt                              # Word Count: Counts the exact number of lines in a file.

@@ -1,0 +1,6 @@
+sed -i 's/old-word/new-word/g' file.txt          # Replace: Finds and replaces "old-word" with "new-word" globally (g) and saves it (-i).
+sed -n '1,30p' file.txt                          # Print Range: '-n' mutes default output, '1,30p' explicitly prints ONLY lines 1 to 30.
+sed -n '1p;5p' /etc/passwd                       # Print Specific Lines: Prints ONLY line 1 and line 5 from the passwd file (using semicolon ; to combine instructions).
+sed -n '/error/p' /var/log/auth.log              # Print Pattern Match: Prints only the lines containing the word "error".
+sed -i '/^$/d' file.txt                          # Delete Blank Lines: Removes all completely empty lines from a text file.
+sed 's/^[ \t]*//' file.txt                       # Trim: Removes leading whitespaces or tabs from the beginning of each line.

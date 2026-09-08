@@ -7,3 +7,4 @@ Ctrl + A        # Home: Moves the cursor to the very beginning of the current co
 Ctrl + E        # End: Moves the cursor to the very end of the current command line.
 Ctrl + U        # Clear Line: Deletes everything from the cursor to the beginning of the line.
 Tab             # Autocomplete: Automatically completes file names, directory paths, or commands.
+

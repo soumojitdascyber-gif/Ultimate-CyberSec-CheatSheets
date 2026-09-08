@@ -1,14 +1,18 @@
-# 🐉 Ultimate Kali Linux Cheat Sheet
+# 🐉 The Ultimate Kali Linux & SOC Command Vault
 
-A comprehensive guide to the most essential Linux commands used by Penetration Testers, Ethical Hackers, and SOC Analysts. This cheat sheet is categorized from basic system operations to advanced enumeration and networking.
+An exhaustive and professional cheat sheet covering essential to advanced Linux commands. Designed strictly for Penetration Testers, Ethical Hackers, and SOC Analysts for rapid enumeration, system administration, and exploitation.
 
-## 🟢 1. Basic System & Directory Operations
-Essential commands for navigating the file system and managing the terminal.
+---
+
+## 🟢 1. System Navigation & Directory Operations
+*The foundation of moving around the Linux file system seamlessly.*
 
 ```bash
-pwd                   # Print Working Directory: Displays the absolute path of your current directory.
-ls -la                # List all: Displays all files (including hidden ones) with detailed permissions.
-cd /var/log           # Change Directory: Navigates to a specific directory (e.g., /var/log).
-history               # History: Shows a list of all previously executed commands in the terminal.
-clear                 # Clear: Clears the terminal screen for a clean workspace.
-man <command>         # Manual: Opens the detailed manual page for a specific command (e.g., man nmap).
+pwd                     # Print Working Directory: Shows the absolute path of the current directory.
+ls -lah                 # List All Human-Readable: Lists all files, hidden files, and exact sizes in KB/MB.
+cd /var/www/html        # Change Directory: Moves to the default web server root directory.
+cd ..                   # Move up one directory level.
+cd -                    # Jump back to the previous working directory.
+tree                    # Tree: Displays directories and files in a hierarchical tree format.
+history                 # History: Shows the command history (useful to check what other users/attackers ran).
+clear                   # Clear: Clears the terminal screen.

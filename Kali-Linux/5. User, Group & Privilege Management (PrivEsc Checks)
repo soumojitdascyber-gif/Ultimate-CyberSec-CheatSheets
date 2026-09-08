@@ -1,0 +1,8 @@
+whoami                  # Who Am I: Displays the current username.
+id                      # ID: Shows user ID (UID), primary group ID (GID), and all associated groups.
+sudo -l                 # Sudo List: Lists commands the current user can execute as root without a password.
+cat /etc/passwd         # Shows all registered users on the Linux system.
+cat /etc/shadow         # Shows password hashes for all users (Requires root privileges).
+su - username           # Switch User: Switches to a different user account.
+useradd -m hacker       # User Add: Creates a new user named 'hacker' and creates a home directory.
+usermod -aG sudo hacker # User Mod: Adds the user 'hacker' to the sudo (admin) group.

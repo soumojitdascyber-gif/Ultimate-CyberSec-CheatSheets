@@ -1,9 +1,0 @@
-cat /etc/passwd         # Concatenate: Reads the contents of the passwd file (User enumeration).
-less /var/log/syslog    # Less: Paginates large files (Press 'q' to quit, '/' to search within).
-tail -n 50 auth.log     # Tail: Shows the last 50 lines of the authentication log.
-tail -f access.log      # Tail Follow: Streams real-time updates of a log file (Crucial for SOC monitoring).
-head -n 20 file.txt     # Head: Displays the first 20 lines of a file.
-touch newfile.txt       # Touch: Creates an empty file or updates the timestamp of an existing one.
-rm -rf /tmp/folder      # Remove: Forcefully and recursively deletes a folder and its contents (Use with caution!).
-cp file1.txt /tmp/      # Copy: Copies a file to a specific destination.
-mv file1.txt file2.txt  # Move/Rename: Renames a file or moves it to a new location.

@@ -1,0 +1,8 @@
+ps aux                  # Process Status: Lists all running processes with extreme detail (User, CPU, Memory, Command).
+top                     # Top: Real-time, interactive process viewer.
+htop                    # Htop: Enhanced, colorful, and interactive version of top (May require installation).
+kill -9 1234            # Kill: Force-kills process number 1234 (SIGKILL).
+pkill apache2           # Process Kill: Kills all processes matching the name 'apache2'.
+systemctl start ssh     # Systemctl: Starts the SSH service.
+systemctl enable ssh    # Systemctl: Configures the SSH service to start automatically on system boot.
+systemctl status ssh    # Systemctl: Checks if the SSH service is active, inactive, or failed.

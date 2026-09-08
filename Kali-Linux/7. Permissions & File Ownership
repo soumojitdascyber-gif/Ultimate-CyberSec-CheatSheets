@@ -1,0 +1,5 @@
+chmod +x exploit.sh     # Change Mode: Makes a script executable.
+chmod 777 file.txt      # Grants Read(4), Write(2), and Execute(1) permissions to everyone (Dangerous).
+chmod 600 id_rsa        # Sets strict permissions for an SSH private key (Only the owner can read/write).
+chown root:root file    # Change Owner: Changes the owner and group of a file to 'root'.
+chattr +i file.txt      # Change Attribute: Makes a file immutable (Cannot be deleted or modified, even by root!).

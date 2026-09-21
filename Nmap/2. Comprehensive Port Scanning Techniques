@@ -1,0 +1,10 @@
+nmap -sS <TARGET-IP>             # TCP SYN Scan (Stealth): Fast, half-open scan (Requires root privileges).
+nmap -sT <TARGET-IP>             # TCP Connect Scan: Completes the full 3-way handshake (No root needed, but loud).
+nmap -sU <TARGET-IP>             # UDP Scan: Scans UDP ports (DNS, SNMP, DHCP). Can be slow but essential.
+nmap -sA <TARGET-IP>             # TCP ACK Scan: Maps out firewall rulesets (identifies stateful vs stateless filters).
+nmap -sW <TARGET-IP>             # TCP Window Scan: Similar to ACK scan, but can sometimes differentiate open/closed ports on certain OS.
+nmap -sM <TARGET-IP>             # TCP Maimon Scan: Uses FIN/ACK flags; bypasses some packet-filtering firewalls (mostly BSD systems).
+nmap -sN <TARGET-IP>             # TCP Null Scan: Sends packets with NO flags set. Bypasses some stateless firewalls.
+nmap -sF <TARGET-IP>             # TCP FIN Scan: Sends packets with only the FIN flag set.
+nmap -sX <TARGET-IP>             # TCP Xmas Scan: Lights up TCP flags (FIN, PSH, URG) to bypass certain stateless firewalls.
+nmap -sY <TARGET-IP>             # SCTP INIT Scan: Scans SCTP services (often used in telecom/SS7 networks).

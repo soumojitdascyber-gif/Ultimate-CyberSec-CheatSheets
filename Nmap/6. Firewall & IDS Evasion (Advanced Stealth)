@@ -1,0 +1,10 @@
+nmap -f <TARGET-IP>              # Fragment Packets: Splits IP packets into tiny fragments (8 bytes) to confuse packet filters.
+nmap --mtu 24 <TARGET-IP>        # Custom MTU: Sets a custom fragment size (must be a multiple of 8).
+nmap -D RND:10 <TARGET-IP>       # Decoy Scan: Spoofs scan with 10 random fake IPs to hide your real IP in the logs.
+nmap -S <SPOOFED-IP> <TARGET-IP> # Source IP Spoofing: Fakes your source IP (Requires proper routing to see responses).
+nmap -e eth0 <TARGET-IP>         # Interface Binding: Forces Nmap to use a specific network interface.
+nmap -g 53 <TARGET-IP>           # Source Port Spoofing: Forces Nmap to send traffic from port 53 (DNS) or 80 (HTTP).
+nmap --data-length 50 <TARGET-IP># Random Data Padding: Appends random bytes to packets to bypass signature-based IDS.
+nmap --ttl 128 <TARGET-IP>       # Custom TTL: Sets a specific Time-To-Live value to spoof your operating system type.
+nmap --spoof-mac Apple <TARGET-IP># MAC Spoofing: Fakes your MAC address to appear as a specific vendor or completely random (0).
+nmap --badsum <TARGET-IP>        # Bad Checksum: Sends invalid TCP/UDP checksums. Only misconfigured firewalls will respond.

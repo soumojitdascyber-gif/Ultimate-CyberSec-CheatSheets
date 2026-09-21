@@ -1,0 +1,7 @@
+nmap -sC <TARGET-IP>                     # Default Scripts: Runs standard, safe reconnaissance scripts.
+nmap --script vuln <TARGET-IP>           # Vulnerability Scripts: Scans target for known CVEs across all open ports.
+nmap --script auth <TARGET-IP>           # Auth Scripts: Runs scripts related to user authentication and bypasses.
+nmap --script ftp-brute <TARGET-IP>      # Brute Force: Attempts to brute-force passwords against an FTP service.
+nmap --script http-enum <TARGET-IP>      # Web Enum: Discovers hidden directories hosted on a web server.
+nmap --script smb-os-discovery <TARGET-IP> # SMB Recon: Extracts OS version, computer name, and domain from SMB.
+nmap --script-args user=admin,pass=admin # Script Arguments: Passes specific credentials or parameters into the NSE script.

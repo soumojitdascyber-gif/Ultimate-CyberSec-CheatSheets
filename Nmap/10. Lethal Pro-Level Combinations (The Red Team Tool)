@@ -1,0 +1,15 @@
+# 1. The Ghost Stealth Recon (Zero Trace)
+nmap -sS -Pn -D RND:10 -g 53 --data-length 25 -T3 -p- <TARGET-IP>
+# SYN Scan, No Ping, 10 Decoys, DNS Source Port, Padded Packets, Normal Timing, All Ports.
+
+# 2. CTF / OSCP Ultra-Fast Recon
+nmap -sC -sV -O -p- --min-rate 5000 <TARGET-IP>
+# Aggressively scans all ports at 5000 packets/sec, grabs versions, OS, and runs default scripts. (Extremely loud but fast).
+
+# 3. Web WAF/Firewall Bypass Enumeration
+nmap -Pn -sV -p 80,443 --script "http-enum" --script-args http.useragent="Mozilla/5.0" <TARGET-IP>
+# Maps web ports and runs enum scripts while changing default Nmap User-Agent to bypass WAFs.
+
+# 4. The Stealth Firewall State Mapper
+nmap -sA -sN -p- -T4 <TARGET-IP>
+# Combines ACK and NULL scans against all ports to deeply map out the target's firewall rule sets and unfiltered ports.

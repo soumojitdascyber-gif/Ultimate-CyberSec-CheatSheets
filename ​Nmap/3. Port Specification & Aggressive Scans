@@ -1,4 +1,0 @@
-nmap -p 80,443,22 <TARGET-IP>    # Specific Ports: Scans only the designated ports.
-nmap -p- <TARGET-IP>             # All Ports: Scans all 65,535 TCP ports.
-nmap --top-ports 100 <TARGET-IP> # Top Ports: Scans only the 100 most commonly used ports.
-nmap -A <TARGET-IP>              # Aggressive Scan: Enables OS detection, versioning, scripts, and traceroute.

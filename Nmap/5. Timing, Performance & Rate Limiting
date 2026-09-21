@@ -1,0 +1,6 @@
+nmap -T0 <TARGET-IP>             # Paranoid (T0): Extremely slow, sends packets every 5 minutes (Evades basic IDS).
+nmap -T3 <TARGET-IP>             # Normal (T3): Default balanced speed.
+nmap -T4 <TARGET-IP>             # Aggressive (T4): Fast scan. Recommended for reliable, modern networks.
+nmap -T5 <TARGET-IP>             # Insane (T5): Unbelievably fast, but risks dropping packets and missing ports.
+nmap --min-rate 1000 <TARGET-IP> # Min Rate: Forces Nmap to send at least 1000 packets per second (Very loud, very fast).
+nmap --max-retries 1 <TARGET-IP> # Max Retries: Limits port scan probe retransmissions to speed up scans on filtered networks.

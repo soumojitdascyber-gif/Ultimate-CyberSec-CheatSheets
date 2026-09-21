@@ -1,0 +1,6 @@
+nmap -sV <TARGET-IP>             # Version Detection: Probes open ports to determine exact service/version info.
+nmap -sV --version-light <IP>    # Light Version Scan: Faster version detection (Intensity 2), might miss obscure services.
+nmap -sV --version-all <IP>      # Full Version Scan: Tries every single probe (Intensity 9) for maximum accuracy.
+nmap -O <TARGET-IP>              # OS Detection: Attempts to identify the target OS using TCP/IP fingerprinting.
+nmap --osscan-guess <TARGET-IP>  # Aggressive OS Guess: Forces OS guessing if the standard check is ambiguous.
+nmap -A <TARGET-IP>              # Aggressive Scan: Enables OS detection, versioning, default scripts (-sC), and traceroute.

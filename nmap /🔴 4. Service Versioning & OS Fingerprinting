@@ -1,0 +1,4 @@
+nmap -sV <TARGET-IP>             # Version Detection: Probes open ports to determine exact service and version info.
+nmap -sV --version-intensity 9 <TARGET-IP> # Max Intensity: Sets intensity to 9 (highest) to try all probes for version identification.
+nmap -O <TARGET-IP>              # OS Detection: Attempts to identify the target's operating system using TCP/IP stack fingerprinting.
+nmap --osscan-guess <TARGET-IP>  # Aggressive OS Guess: Forces Nmap to guess the OS more aggressively if the standard check fails.

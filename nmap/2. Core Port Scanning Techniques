@@ -1,5 +1,0 @@
-nmap -sS <TARGET-IP>             # TCP SYN Scan (Stealth): Default for root users. Fast, half-open scan that doesn't complete the 3-way handshake.
-nmap -sT <TARGET-IP>             # TCP Connect Scan: Completes the full 3-way handshake. Used when you lack root/sudo privileges.
-nmap -sU <TARGET-IP>             # UDP Scan: Scans UDP ports (DNS, SNMP, DHCP). Can be slow but essential for full recon.
-nmap -sA <TARGET-IP>             # TCP ACK Scan: Used to map out firewall rulesets and determine if a port is filtered (stateful vs stateless).
-nmap -sX <TARGET-IP>             # Xmas Scan: Lights up TCP flags (FIN, PSH, URG) like a Christmas tree to bypass certain stateless firewalls.

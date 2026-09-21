@@ -1,0 +1,4 @@
+nmap -oN normal.txt <TARGET-IP>  # Normal Output: Saves the scan results exactly as they appear on the terminal.
+nmap -oG grep.txt <TARGET-IP>    # Grepable Output: Saves results in a single-line format easily parsed by grep/awk.
+nmap -oX output.xml <TARGET-IP>  # XML Output: Saves results in XML (Required for importing into Metasploit/Searchsploit).
+nmap -oA scan_results <TARGET-IP># Output All: Saves results in Normal, Grepable, and XML formats simultaneously.

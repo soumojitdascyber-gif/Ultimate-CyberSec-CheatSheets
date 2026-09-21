@@ -1,6 +1,0 @@
-nmap -T0 <TARGET-IP>             # Paranoid Timing: Incredibly slow, designed to sneak past IDS (Intrusion Detection Systems).
-nmap -T3 <TARGET-IP>             # Normal Timing: Default balanced speed.
-nmap -T4 <TARGET-IP>             # Aggressive Timing: Fast scan. Highly recommended for reliable, high-speed local networks.
-nmap -oN nmap_normal.txt <TARGET-IP> # Normal Output: Saves the scan results to a standard readable text file.
-nmap -oG nmap_grep.txt <TARGET-IP>   # Grepable Output: Saves results in a format easily parsed by 'grep', 'awk', etc.
-nmap -oA scan_results <TARGET-IP>    # Output All: Saves the results in Normal, Grepable, and XML formats simultaneously.

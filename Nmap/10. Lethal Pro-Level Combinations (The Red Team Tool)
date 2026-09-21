@@ -1,15 +1,38 @@
-# 1. The Ghost Stealth Recon (Zero Trace)
-nmap -sS -Pn -D RND:10 -g 53 --data-length 25 -T3 -p- <TARGET-IP>
-# SYN Scan, No Ping, 10 Decoys, DNS Source Port, Padded Packets, Normal Timing, All Ports.
+## ☢️ 10. The Beast Mode: Pentester & Bug Bounty Combinations
+*The absolute most powerful, stealthy, and lethal Nmap combinations designed strictly for Bug Bounty Hunters and Red Teamers. Extract maximum vulnerabilities, bypass WAFs, and completely mask your real IP.*
 
-# 2. CTF / OSCP Ultra-Fast Recon
-nmap -sC -sV -O -p- --min-rate 5000 <TARGET-IP>
-# Aggressively scans all ports at 5000 packets/sec, grabs versions, OS, and runs default scripts. (Extremely loud but fast).
+```bash
+# 1. The Phantom Strike (Ultimate IP Hiding & Firewall Bypass)
+nmap -sS -Pn -f --mtu 24 -D RND:20 -g 53 --data-length 33 --randomize-hosts -T2 -p- <TARGET-IP>
+# HOW IT WORKS: Skips ping (-Pn), heavily fragments packets to bypass firewalls (-f --mtu 24), masks your IP with 20 random decoys (-D RND:20), spoofs the source port as DNS (-g 53), adds 33 bytes of random junk data to evade signature detection, scans all ports (-p-), and uses a stealthy speed (-T2). 
 
-# 3. Web WAF/Firewall Bypass Enumeration
-nmap -Pn -sV -p 80,443 --script "http-enum" --script-args http.useragent="Mozilla/5.0" <TARGET-IP>
-# Maps web ports and runs enum scripts while changing default Nmap User-Agent to bypass WAFs.
+# 2. Bug Bounty Web Vuln Sweep (WAF Evasion & Deep Recon)
+nmap -sV -Pn -p 80,443,8000,8080,8443 --script "http-enum,http-vuln*" --script-args http.useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64)" -f <TARGET-IP>
+# HOW IT WORKS: Targets specific web ports commonly found in bug bounties. It runs web enumeration and all HTTP vulnerability scripts, but strictly changes the Nmap User-Agent to look like a normal Windows browser, bypassing Web Application Firewalls (WAF) that block standard Nmap probes.
 
-# 4. The Stealth Firewall State Mapper
-nmap -sA -sN -p- -T4 <TARGET-IP>
-# Combines ACK and NULL scans against all ports to deeply map out the target's firewall rule sets and unfiltered ports.
+# 3. The Zero-Trace Zombie Vuln Scanner
+nmap -sI <ZOMBIE-IP> -Pn -p- -sV --script vuln <TARGET-IP>
+# HOW IT WORKS: The holy grail of stealth. Uses a third-party Zombie machine to bounce the scan. The target's IDS/Firewall logs will ONLY record the Zombie's IP, while you extract full version details and known CVE vulnerabilities.
+
+# 4. The Internal Network Beast (CTF / OSCP Dominator)
+nmap -A -p- --min-rate 5000 --max-retries 1 --script "safe and vuln" -oA full_network_scan <TARGET-IP>
+# HOW IT WORKS: Built for speed and maximum intel when stealth doesn't matter (e.g., inside an already compromised internal network). Blasts all ports at 5000 packets/sec, limits retries to save time, runs full aggressive OS checks, tests for vulnerabilities, and saves the output in all formats.
+
+# 5. The Cloudflare / CDN Origin Revealer (Bug Bounty Special)
+nmap -sV -p 443 --script "ssl-cert,ssl-enum-ciphers" -Pn <TARGET-IP>
+# HOW IT WORKS: Bug bounty targets often hide behind CDNs like Cloudflare. This bypasses the web front and deeply probes the SSL/TLS certificates. The extracted SSL details often leak the internal hostname or the real Origin Server IP address!
+
+# 6. The "Low & Slow" Rate-Limit Evader
+nmap -sS -Pn -T1 --scan-delay 10s --max-retries 0 -p 80,443,8080,8443 <TARGET-IP>
+# HOW IT WORKS: Built to defeat strict rate-limiting WAFs that block IPs making too many requests. It waits 10 seconds between EVERY single packet (--scan-delay 10s) and never retries dropped packets (--max-retries 0). It takes a long time, but it is practically invisible.
+
+# 7. The Subdomain & DNS Infrastructure Mapper
+nmap -sU -p 53 --script "dns-brute,dns-zone-transfer" <TARGET-DOMAIN>
+# HOW IT WORKS: Essential for Bug Bounty recon. Scans the UDP DNS port and attempts to brute-force hidden subdomains or pull a full DNS zone transfer. Massive for expanding your attack surface.
+
+# 8. The Ultimate Smokescreen (Red Team Chaos)
+nmap -sS -Pn -D RND:50 --spoof-mac 0 -f --mtu 32 --data-length 64 -T2 -p- <TARGET-IP>
+# HOW IT WORKS: Creates absolute chaos for the Blue Team. It generates 50 random IPs, spoofs your MAC address completely, uses custom 32-byte fragmentation, and adds 64 bytes of junk data to every packet. Finding your real IP in the logs becomes like finding a needle in a haystack.
+
+# 9. SYN stealth scanning, packet fragmentation, decoy IP mixing, source port spoofing, and timing adjustments:
+sudo nmap -sS -T2 -f -n -Pn --source-port 53 -D RND:10 --scan-delay 2s [target]

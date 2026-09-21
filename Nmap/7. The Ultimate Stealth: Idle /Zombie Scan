@@ -1,0 +1,1 @@
+nmap -sI <ZOMBIE-IP> <TARGET-IP> # Idle Scan: Uses a third-party Zombie machine (must have predictable IP ID). Target logs only show the Zombie's IP.

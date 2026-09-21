@@ -1,0 +1,7 @@
+nmap -p 80,443,22 <TARGET-IP>    # Specific Ports: Scans only the designated ports.
+nmap -p 1-1000 <TARGET-IP>       # Port Range: Scans ports from 1 to 1000.
+nmap -p U:53,T:80 <TARGET-IP>    # Protocol Specific: Scans UDP port 53 and TCP port 80 simultaneously.
+nmap -p- <TARGET-IP>             # All Ports: Scans all 65,535 TCP ports.
+nmap -F <TARGET-IP>              # Fast Scan: Scans only the top 100 most common ports (much faster than default top 1000).
+nmap --top-ports 2000 <TARGET-IP># Top Ports: Scans the top 2000 most commonly used ports.
+nmap --open <TARGET-IP>          # Open Only: Shows only open (or possibly open) ports in the output, hiding filtered/closed ones.

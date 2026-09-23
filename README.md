@@ -11,7 +11,7 @@ Each tool or category has its own separate folder containing practical commands,
 
 - 📁 [Nmap](./Nmap/) - Network scanning, enumeration, and NSE scripts.
 - 📁 [Kali-Linux](./Kali-Linux/) - Basic setups and standard Kali tools.
-- 📁 [Hydra-Advanced-Playbook](./Hydra-Advanced-Playbook) - Advanced network logon cracker and service-specific brute-forcing playbook.
+- 📁 [Hydra-Master-CheatSheet](./Hydra-Master-CheatSheet) - Advanced network logon cracker and service-specific brute-forcing playbook.
 -
 
 ### 🚧 Work In Progress (Future Updates):

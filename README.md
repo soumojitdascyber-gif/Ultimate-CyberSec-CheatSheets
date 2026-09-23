@@ -11,8 +11,8 @@ Each tool or category has its own separate folder containing practical commands,
 
 - 📁 [Nmap](./Nmap/) - Network scanning, enumeration, and NSE scripts.
 - 📁 [Kali-Linux](./Kali-Linux/) - Basic setups and standard Kali tools.
-- * 📁 [Hydra-Advanced-Playbook](./Hydra-Advanced-Playbook) - Advanced network logon cracker and service-specific brute-forcing playbook.
-*
+- 📁 [Hydra-Advanced-Playbook](./Hydra-Advanced-Playbook) - Advanced network logon cracker and service-specific brute-forcing playbook.
+-
 
 ### 🚧 Work In Progress (Future Updates):
 As I grow my skills as a Future SOC Analyst & Pentester, I will keep adding more tools here (e.g., Wireshark, Metasploit, Burp Suite, etc.).
